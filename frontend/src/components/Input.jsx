@@ -6,7 +6,7 @@ export default function Input() {
       <div class="text-center">
         <input
           type="text"
-          placeholder="spoke yo mine (get it?)"
+          placeholder="Type here: "
           className="input-lg rounded-3xl input-bordered w-full"
         />
 
