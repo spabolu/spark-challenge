@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple ChatGPT Interface</title>
+</head>
+<body>
+    <h1>Chat with an AWS LLM</h1>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const input = document.getElementById('user-input').value;
+            const responseDiv = document.getElementById('response');
+
+            // const res = await fetch('https://your-api-endpoint.amazonaws.com/dev/send-input', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ input })
+            // });
+            // const data = await res.json();
+            // responseDiv.innerText = data.output;
+
+            responseDiv.innerText = "response";
+        });
+    </script>
+</body>
+</html>
+
+
