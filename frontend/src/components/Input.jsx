@@ -4,19 +4,19 @@ export default function Input() {
   return (
     <div class="hero pt-10">
       <div class="text-center">
-        <input
-          type="text"
-          placeholder="Type here: "
-          className="input-lg rounded-3xl input-bordered w-full"
-        />
+        <div className="max-w-xl">
+          <p class="card-title py-2">Speak Your Mind!</p>
+          <input
+            type="text"
+            placeholder="Type here: "
+            className="input-lg rounded-3xl input-bordered w-full max-w-xs"
+          />
+        </div>
 
         <div className="max-w-xl">
-          <p class="py-8">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <p class="card-title py-3 justify-center mt-10 mb-5">
+            Read what others are saying
           </p>
-          <button class="btn btn-primary">Learn More</button>
         </div>
       </div>
     </div>
