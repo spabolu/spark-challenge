@@ -1,24 +1,14 @@
-import React from "react";
+import { SendHorizonal } from "lucide-react";
 
 export default function Input() {
   return (
-    <div class="hero pt-10">
-      <div class="text-center">
-        <input
-          type="text"
-          placeholder="Type here: "
-          className="input-lg rounded-3xl input-bordered w-full"
-        />
-
-        <div className="max-w-xl">
-          <p class="py-8">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button class="btn btn-primary">Learn More</button>
-        </div>
-      </div>
+    <div className="w-full max-w-2xl my-7">
+      <label className="input input-bordered flex items-center gap-2">
+        <input type="text" className="grow" placeholder="Search" />
+        <button className="hover:opacity-70 opacity-80">
+          <SendHorizonal />
+        </button>
+      </label>
     </div>
   );
 }
