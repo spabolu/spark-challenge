@@ -55,15 +55,18 @@ export default function Solutions() {
       <div className="w-full max-w-screen-xl overflow-x-auto">
         <div className="flex space-x-4">
           {userFeedback.map((comment, index) => (
-            <Card
-              key={index}
-              username={comment.username}
-              message={comment.message}
-              upvote={comment.upvote}
-              downvote={comment.downvote}
-              className="bg-neutral text-neutral-content" // Card specific styles
-              showInput={false}
-            />
+            <div key={index} className="w-[400px] h-[300px]">
+              {' '}
+              {/* Adjust width and height here */}
+              <Card
+                username={comment.username}
+                message={comment.message}
+                upvote={comment.upvote}
+                downvote={comment.downvote}
+                className="bg-neutral text-neutral-content" // Card specific styles
+                showInput={false}
+              />
+            </div>
           ))}
         </div>
       </div>
