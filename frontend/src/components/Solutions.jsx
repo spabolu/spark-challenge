@@ -10,6 +10,8 @@ export default function Solutions() {
         message="I love mining!"
         upvote={5}
         downvote={5}
+        className="bg-neutral text-neutral-content"
+        showInput={false}
       />
     </>
   );

@@ -30,6 +30,8 @@ export default function FeedbackCards() {
             message={comment.message}
             upvote={comment.upvote}
             downvote={comment.downvote}
+            className="bg-neutral text-neutral-content"
+            showInput={true}
           />
         ))}
       </div>
