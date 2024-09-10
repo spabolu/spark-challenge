@@ -1,14 +1,14 @@
+import Solutions from "@/components/Solutions";
 import Input from "@/components/Input";
-import CommentCards from "@/components/CommentCards";
+import FeedbackCards from "@/components/FeedbackCards";
 
 export default function Home() {
   return (
     <>
       <div className="grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <Input />
-        <main className="flex flex-col items-center sm:items-start">
-          <CommentCards />
-        </main>
+        <Solutions />
+        <Input />
+        <FeedbackCards />
       </div>
     </>
   );
