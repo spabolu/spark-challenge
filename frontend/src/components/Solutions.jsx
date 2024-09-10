@@ -3,46 +3,39 @@ import Card from "@/components/Card";
 
 const userFeedback = [
   {
-    username: "High-Usage of Water in the Morceni Mines",
+    username: 'Environmental Pollution',
     message:
-      "Labore deserunt occaecat Lorem pariatur exercitation. Ex aliqua esse voluptate ut occaecat cupidatat ea sint esse et.",
+      'Implement stricter environmental regulations and monitoring to prevent pollution, and invest in clean-up efforts to restore damaged ecosystems.',
     upvote: 44,
     downvote: 9,
   },
   {
-    username: "Pollution In My Reservation From Leakages of Mining Tailings",
+    username: 'Environmental Pollution',
     message:
-      "Exercitation sunt veniam fugiat incididunt irure dolore proident elit dolor exercitation exercitation cillum veniam ipsum.",
-    upvote: 28,
-    downvote: 3,
+      'Implement stricter environmental regulations and monitoring to prevent pollution, and invest in clean-up efforts to restore damaged ecosystems.',
+    upvote: 44,
+    downvote: 9,
   },
   {
-    username: "Pollution In My Reservation From Leakages of Mining Tailings",
+    username: 'Environmental Pollution',
     message:
-      "Exercitation sunt veniam fugiat incididunt irure dolore proident elit dolor exercitation exercitation cillum veniam ipsum.",
-    upvote: 43,
-    downvote: 3,
+      'Implement stricter environmental regulations and monitoring to prevent pollution, and invest in clean-up efforts to restore damaged ecosystems.',
+    upvote: 44,
+    downvote: 9,
   },
   {
-    username: "Pollution In My Reservation From Leakages of Mining Tailings",
+    username: 'Environmental Pollution',
     message:
-      "Exercitation sunt veniam fugiat incididunt irure dolore proident elit dolor exercitation exercitation cillum veniam ipsum.",
-    upvote: 43,
-    downvote: 77,
+      'Implement stricter environmental regulations and monitoring to prevent pollution, and invest in clean-up efforts to restore damaged ecosystems.',
+    upvote: 44,
+    downvote: 9,
   },
   {
-    username: "Pollution In My Reservation From Leakages of Mining Tailings",
+    username: 'Environmental Pollution',
     message:
-      "Exercitation sunt veniam fugiat incididunt irure dolore proident elit dolor exercitation exercitation cillum veniam ipsum.",
-    upvote: 14,
-    downvote: 8,
-  },
-  {
-    username: "Pollution In My Reservation From Leakages of Mining Tailings",
-    message:
-      "Exercitation sunt veniam fugiat incididunt irure dolore proident elit dolor exercitation exercitation cillum veniam ipsum.",
-    upvote: 50,
-    downvote: 18,
+      'Implement stricter environmental regulations and monitoring to prevent pollution, and invest in clean-up efforts to restore damaged ecosystems.',
+    upvote: 44,
+    downvote: 9,
   },
 ];
 
@@ -50,7 +43,7 @@ export default function Solutions() {
   return (
     <>
       <h3 className="text-3xl font-semibold py-6">Top Solutions This Week</h3>
-      <div className="w-full max-w-screen-xl overflow-x-auto no-scrollbar">
+      <div className="max-w-7xl overflow-x-auto no-scrollbar text-center">
         <div className="flex space-x-4">
           {userFeedback.map((comment, index) => (
             <div key={index}>

@@ -1,11 +1,11 @@
-import { ThumbsDownIcon, ThumbsUpIcon } from "lucide-react";
+import { ThumbsDownIcon, ThumbsUpIcon } from 'lucide-react';
 
 export default function Card({
   username,
   message,
   upvote = 0,
   downvote = 0,
-  className = "",
+  className = '',
   showInput = false,
 }) {
   return (
@@ -28,11 +28,6 @@ export default function Card({
             className="input input-bordered input-md w-full max-w-xs mt-2"
           />
         )}
-        {/* <input
-          type="text"
-          placeholder="Comment: "
-          className="input input-bordered input-md w-full max-w-xs mt-2"
-        /> */}
       </div>
     </div>
   );
