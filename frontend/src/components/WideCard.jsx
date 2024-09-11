@@ -15,8 +15,9 @@ export default function WideCard({
       className={`card w-auto max-w-2xl m-0.2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-lg ${className}`}
     >
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{username}</h2>
-        <p>{message}</p>
+        <iframe src={username} width="60%" height="500px" />
+        {/* <h2 className="card-title">{username}</h2> */}
+        <p className="pt-2">{message}</p>
         <div className="card-actions justify-between mt-3">
           <button className="btn btn-primary">
             <ThumbsUpIcon /> {upvote}

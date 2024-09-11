@@ -38,6 +38,8 @@ export default function Page() {
 
   return (
     <div className="grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+      
+    
       <ArticlePage />
 
       <div className="w-full max-w-2xl mt-9">
