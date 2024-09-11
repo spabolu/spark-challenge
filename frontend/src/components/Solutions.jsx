@@ -1,3 +1,4 @@
+// Solutions.jsx
 import Card from '@/components/Card';
 
 export default function Solutions({ solutionsVal = [], onCardClick }) {
@@ -8,7 +9,6 @@ export default function Solutions({ solutionsVal = [], onCardClick }) {
         <div className="flex space-x-4">
           {solutionsVal.map((solution, index) => (
             <div key={index} onClick={() => onCardClick(solution)}>
-              {/* When card is clicked, call onCardClick and pass the solution */}
               <Card
                 username={solution.problempreview}
                 message={solution.solutionpreview}
