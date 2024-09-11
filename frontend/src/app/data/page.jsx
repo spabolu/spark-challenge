@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { SendHorizontal } from "lucide-react";
 
+import ArticlePage from "@/components/ArticlePage";
+
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
   const [coordinates, setCoordinates] = useState({
