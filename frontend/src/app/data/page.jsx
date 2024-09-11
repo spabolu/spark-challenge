@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { SendHorizontal } from "lucide-react";
-import PDFPreview from "@/components/PDFPreview";
 
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");
   const [coordinates, setCoordinates] = useState({
-    lat: 61.09758,
+    lat: 61.09758, // default values
     lng: -147.05437,
   });
 
@@ -37,7 +36,8 @@ export default function Page() {
 
   return (
     <div className="grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <PDFPreview />
+      
+
       <div className="w-full max-w-2xl mt-9">
         <h3 className="text-xl font-semibold">Analyze Mine Data:</h3>
         <div className="input input-bordered flex items-center gap-2">

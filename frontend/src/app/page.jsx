@@ -1,10 +1,8 @@
-import Solutions from "@/components/Solutions";
+"use client";
+
 import Input from "@/components/Input";
-import FeedbackCards from "@/components/FeedbackCards";
-import PDFPreview from "@/components/PDFPreview";
-import PostList from '@/components/PostList';
-import FeedbackPage from '@/components/FeedbackPage';
-import SolutionPage from '@/components/SolutionPage';
+import FeedbackPage from "@/components/FeedbackPage";
+import SolutionPage from "@/components/SolutionPage";
 
 export default function Home() {
   return (
