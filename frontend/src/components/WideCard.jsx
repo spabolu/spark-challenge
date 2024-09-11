@@ -1,6 +1,6 @@
 import { ThumbsDownIcon, ThumbsUpIcon } from "lucide-react";
 
-export default function Card({
+export default function WideCard({
   username,
   message,
   upvote = 0,
@@ -12,7 +12,7 @@ export default function Card({
   return (
     <div
       onClick={onClick} // Making the card clickable
-      className={`card w-96 m-0.2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-lg ${className}`}
+      className={`card w-auto max-w-2xl m-0.2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-95 hover:shadow-lg ${className}`}
     >
       <div className="card-body items-center text-center">
         <h2 className="card-title">{username}</h2>
