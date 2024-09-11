@@ -1,25 +1,25 @@
 // src/components/FeedbackPage.jsx
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import ArticleCards from './ArticleCards';
+import { useEffect, useState } from "react";
+import ArticleCards from "./ArticleCards";
 
 const ArticlePage = () => {
   const [articles, setArticles] = useState([]);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const res = await fetch('/api/postsArticles'); 
+        const res = await fetch("/api/postsArticles");
         if (!res.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const data = await res.json();
         setArticles(data);
       } catch (error) {
-        console.error('Error fetching feedbacks:', error);
-        setError('Failed to load feedbacks.');
+        console.error("Error fetching feedbacks:", error);
+        setError("Failed to load feedbacks.");
       }
     };
     fetchArticles();
@@ -28,6 +28,9 @@ const ArticlePage = () => {
   return (
     <div>
       {error && <p>{error}</p>}
+      <h3 className="text-3xl text-center font-semibold my-5">
+        Articles Cards Here
+      </h3>
       <ArticleCards articleData={articles} />
     </div>
   );
