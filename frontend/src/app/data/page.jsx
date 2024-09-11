@@ -1,7 +1,9 @@
+import PDFPreview from "@/components/PDFPreview";
+
 const Page = () => {
     return (
       <div>
-        <p>Data Page</p>
+        <PDFPreview />
       </div>
     );
   };

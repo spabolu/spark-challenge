@@ -1,6 +1,7 @@
 import Solutions from "@/components/Solutions";
 import Input from "@/components/Input";
 import FeedbackCards from "@/components/FeedbackCards";
+import PDFPreview from "@/components/PDFPreview";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Solutions />
         <Input />
         <FeedbackCards />
+        
       </div>
     </>
   );
