@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import logo from "@/public/IMG_1168.jpeg";
 
 const Header = () => {
   return (
@@ -7,10 +10,23 @@ const Header = () => {
         href="/"
         className="flex items-center transition-all focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 md:space-x-0.5"
       >
-        <h1 className="text-xl text-white">mineTALK</h1>
+        <Image
+          src={logo}
+          width={120}
+          // height={200}
+          alt="mineTALK logo"
+          className="pb-2"
+        />
+        {/* <h1 className="text-xl text-white">mineTALK</h1> */}
       </Link>
 
       <div className="flex items-center space-x-2 md:space-x-4 ">
+        <Link
+          href="/"
+          className="font-medium text-white transition-all focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Forum
+        </Link>
         <Link
           href="/data"
           className="font-medium text-white transition-all focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
