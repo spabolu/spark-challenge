@@ -1,22 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import Solutions from './Solutions';
-import SolutionModal from './SolutionModal'; // Import your modal component
+import SolutionModal from './SolutionModal';
 
 const SolutionPage = () => {
   const [solutions, setSolutions] = useState([]);
   const [error, setError] = useState('');
-  const [selectedSolution, setSelectedSolution] = useState(null); // Track the selected solution
-  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal open/close state
+  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchSolutions = async () => {
       try {
-        const res = await fetch('/api/postsSol'); // Adjust the URL if necessary
-        if (!res.ok) {
-          throw new Error('Network response was not ok');
-        }
+        const res = await fetch('/api/postsSol');
+        if (!res.ok) throw new Error('Network response was not ok');
         const data = await res.json();
         setSolutions(data);
       } catch (error) {
@@ -27,34 +26,52 @@ const SolutionPage = () => {
     fetchSolutions();
   }, []);
 
-  // Function to open modal and set the selected solution data
   const handleCardClick = (solution) => {
     setSelectedSolution(solution);
-    setIsModalOpen(true); // Open the modal
+    setIsModalOpen(true);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedSolution(null); // Clear selected solution when modal is closed
+    setSelectedSolution(null);
+  };
+
+  const handleVote = async (type) => {
+    const url = type === 'upvote' ? '/api/upvote' : '/api/downvote';
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: selectedSolution.id }), // Assuming `id` is available in selectedSolution
+      });
+      if (!res.ok) throw new Error('Failed to update vote');
+      // Update the UI with the new vote count
+      setSolutions((prevSolutions) =>
+        prevSolutions.map((sol) =>
+          sol.id === selectedSolution.id
+            ? { ...sol, [type]: sol[type] + 1 }
+            : sol
+        )
+      );
+    } catch (error) {
+      console.error('Error updating vote:', error);
+    }
   };
 
   return (
     <div>
       {error && <p>{error}</p>}
-      {/* Pass the handleCardClick function to handle clicks on individual cards */}
       <Solutions solutionsVal={solutions} onCardClick={handleCardClick} />
-
-      {/* Render the modal only when there's a selected solution */}
       {isModalOpen && selectedSolution && (
         <SolutionModal
           problemPreview={selectedSolution.problempreview}
-          problem={selectedSolution.problem} // Assuming `problem` field exists
+          problem={selectedSolution.problem}
           solutionPreview={selectedSolution.solutionpreview}
-          solution={selectedSolution.solution} // Assuming `solution` field exists
+          solution={selectedSolution.solution}
           upvote={selectedSolution.upvote}
           downvote={selectedSolution.downvote}
-          closeModal={closeModal} // Pass the function to close the modal
+          closeModal={closeModal}
+          onVote={handleVote} // Pass the handleVote function to the modal
         />
       )}
     </div>

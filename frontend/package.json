@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-sdk": "^2.1691.0",
+    "axios": "^1.7.7",
     "lucide-react": "^0.439.0",
     "next": "14.2.8",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "serverless-mysql": "^1.5.5"
