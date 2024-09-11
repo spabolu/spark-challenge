@@ -14,10 +14,10 @@ const Header = () => {
           src={logo}
           width={120}
           // height={200}
-          alt="mineTALK logo"
+          alt="minedTALK logo"
           className="pb-2"
         />
-        {/* <h1 className="text-xl text-white">mineTALK</h1> */}
+        {/* <h1 className="text-xl text-white">minedTALK</h1> */}
       </Link>
 
       <div className="flex items-center space-x-2 md:space-x-4 ">

@@ -3,9 +3,9 @@ import React from "react";
 const Page = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">About mineTALK</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">About minedTALK</h1>
       <p className="text-lg text-gray-700 mb-6">
-        At mineTALK, we are dedicated to discussing the impact of mining
+        At minedTALK, we are dedicated to discussing the impact of mining
         activities on local communities and the environment. Our mission is to
         provide a platform where community members can share their experiences,
         raise concerns, and work together to find solutions for a sustainable
@@ -32,8 +32,8 @@ const Page = () => {
       </div>
 
       <p className="text-lg text-gray-600 mt-8">
-        mineTALK is a registered 501(c)(3) non-profit organization. All rights
-        reserved © 2024 mineTALK.
+        minedTALK is a registered 501(c)(3) non-profit organization. All rights
+        reserved © 2024 minedTALK.
       </p>
     </div>
   );
