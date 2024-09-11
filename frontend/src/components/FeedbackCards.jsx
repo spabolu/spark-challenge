@@ -1,6 +1,9 @@
-import Card from "@/components/Card";
+import Card from '@/components/Card';
 
 export default function FeedbackCards({ feedbacks = [] }) {
+  // Reverse the feedbacks array
+  const reversedFeedbacks = [...feedbacks].reverse();
+
   return (
     <>
       <h3 className="text-3xl text-center font-semibold my-5">
@@ -8,7 +11,7 @@ export default function FeedbackCards({ feedbacks = [] }) {
       </h3>
 
       <div className="flex flex-wrap justify-center gap-4">
-        {feedbacks.map((comment, index) => (
+        {reversedFeedbacks.map((comment, index) => (
           <Card
             key={index}
             username={comment.username}
@@ -23,4 +26,3 @@ export default function FeedbackCards({ feedbacks = [] }) {
     </>
   );
 }
-
