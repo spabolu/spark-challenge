@@ -28,9 +28,16 @@ const ArticlePage = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      <h3 className="text-3xl text-center font-semibold my-6">
-        Recent News/Research
-      </h3>
+      <div className="my-6">
+        <h3 className="text-3xl text-center font-semibold">
+          AI Explains News & Research
+        </h3>
+        <p className="text-center max-w-xl mx-auto">
+          View published articles relevant to mining activites and their impact
+          on local communities and the environment. AI provides an snapshot of
+          these articles to help understand the content.
+        </p>
+      </div>
       <ArticleCards articleData={articles} />
     </div>
   );

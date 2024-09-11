@@ -38,12 +38,19 @@ export default function Page() {
 
   return (
     <div className="grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      
-    
       <ArticlePage />
 
       <div className="w-full max-w-2xl mt-9">
-        <h3 className="text-xl font-semibold">Analyze Mine Data:</h3>
+        <div className="my-6">
+          <h3 className="text-3xl text-center font-semibold">
+            Satellite-based Predictive Timelapse
+          </h3>
+          <p className="text-center max-w-xl mx-auto">
+            View the timelapse of any mining site using Google Earth Engine to
+            track activities of landscape, understanding future sustainbility
+            practices.
+          </p>
+        </div>
         <div className="input input-bordered flex items-center gap-2">
           <input
             type="text"

@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "minedTALK",
+  title: "MinedTALK",
   description: "talk to miners",
 };
 
