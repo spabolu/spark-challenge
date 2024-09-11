@@ -54,6 +54,7 @@ Temporary Items
 /node_modules
 /.pnp
 .pnp.js
+frontend/package-lock.json
 
 # testing
 /coverage
