@@ -10,12 +10,6 @@ export default function Input() {
   const [loading, setLoading] = useState(false); // Loading state
   const [currentFeedbackIndex, setCurrentFeedbackIndex] = useState(null); // Index for feedback options
 
-  const feedbackOptions = [
-    'The dust and noise from the mining operations are quite disruptive, but the jobs they provide are essential for the well-being and continued support of our community.',
-    'Our community feels excluded from the decision-making processes that impact our environmental conditions.',
-    'While employment at the mine offers competitive wages, there are significant concerns regarding the associated health risks.',
-  ];
-
   const handleSubmit = async () => {
     setLoading(true); // Set loading to true when starting the API call
 
@@ -53,32 +47,7 @@ export default function Input() {
       (currentFeedbackIndex + 1) % feedbackOptions.length
     );
   };
-
-  const handleTryWithAI = () => {
-    // Determine the index based on the first word of the feedback
-    const firstWord = feedback.split(' ')[0].toLowerCase();
-    let index = null;
-
-    switch (firstWord) {
-      case 'the':
-        index = 0;
-        break;
-      case 'we':
-        index = 1;
-        break;
-      case 'as':
-        index = 2;
-        break;
-      default:
-        index = null; // Handle unexpected first words if necessary
-    }
-
-    // Delay the state updates by 2 seconds
-    setTimeout(() => {
-      setCurrentFeedbackIndex(index);
-      setShowEnhanced(true);
-    }, 2000); // 2000 milliseconds = 2 seconds
-  };
+  
 const handleSubmitAIEnhancedFeedback = async () => {
   if (currentFeedbackIndex === null) {
     console.error('No valid feedback option selected.');
@@ -146,7 +115,7 @@ const handleSubmitAIEnhancedFeedback = async () => {
       <div className="justify-between px">
         <button
           className="mt-2 bg-blue-500 text-white px-4 py-2 rounded flex items-center gap-2" // Add flex and items-center for alignment
-          onClick={handleTryWithAI}
+          onClick={handleSubmitAIEnhancedFeedback}
         >
           <Sparkle className="w-5 h-5" />{' '}
           {/* Adjust the size of the icon if needed */}
