@@ -6,4 +6,4 @@ Project consists of a frontend and a backend. The backend runs on AWS technologi
 
 To run the frontend project, navigate to the frontend directory and simply run `npm run dev`. You need to have node and npm installed on the machine.
 
-Instructions for the AWS Lambda are available [here]([https://www.genome.gov/](https://github.com/spabolu/spark-challenge/blob/main/AWS_Lambda/README.md )).
+Instructions for the AWS Lambda are available [here](https://github.com/spabolu/spark-challenge/blob/main/AWS_Lambda/README.md).
